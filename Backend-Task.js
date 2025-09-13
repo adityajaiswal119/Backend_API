@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
-
-
+app.use(express.json());
 app.post('/signup',(req,res)=>{
     const {name,email} = req.body;
     users.push(name);
@@ -23,4 +22,5 @@ app.post('/login',(req,res)=>{
     if(req.user == response.user){
         app.send('/home');
     }
+
 });
