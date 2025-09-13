@@ -1,7 +1,10 @@
 const express = require('express');
 const app = express();
+app.use(express.json());
 const capacity = [];
+const data = [];
 app.post('/students',(req,res)=>{
+     const {student} = req.body;
      res.json("Create a new student");
 });
 
@@ -40,3 +43,4 @@ app.delete('/unenroll',(req,res)=>{
       enrolledcount--;
     });
 });
+
