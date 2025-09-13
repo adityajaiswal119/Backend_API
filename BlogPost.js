@@ -32,8 +32,6 @@ app.put('/posts/:id', (req, res) => {
     post.content = content;
     res.json(post);
 });
-
-// Delete a blog post
 app.delete('/posts/:id', (req, res) => {
     const { id } = req.params;
     const index = posts.findIndex(p => p.id == id);
@@ -79,3 +77,4 @@ app.delete('/posts/:id/comments/:commentIndex', (req, res) => {
 app.listen(3000, () => {
     console.log('Server running on port 3000');
 });
+
