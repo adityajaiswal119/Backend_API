@@ -72,9 +72,8 @@ app.delete('/posts/:id/comments/:commentIndex', (req, res) => {
     post.comments.splice(idx, 1);
     res.json({ message: "Comment deleted", comments: post.comments });
 });
-
-// Start the server (for testing, remove if using as a module)
 app.listen(3000, () => {
     console.log('Server running on port 3000');
 });
+
 
